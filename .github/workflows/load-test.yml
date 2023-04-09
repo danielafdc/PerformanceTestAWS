@@ -10,5 +10,5 @@ jobs:
 
       - name: Run k6 load test
         uses: grafana/k6-action@v0.2.0
-      with:
-        filename: scripts/test.js
+        with:
+          filename: scripts/test.js
