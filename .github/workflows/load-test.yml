@@ -12,3 +12,10 @@ jobs:
         uses: grafana/k6-action@v0.2.0
         with:
           filename: scripts/test.js
+      - run: ls & mkdir report & mv index.html report
+
+      - name: Upload artifact
+        uses: actions/upload-artifact@v3
+        with:
+          name: relatório de testes de performance
+          path: report
